@@ -1,5 +1,5 @@
 #include<iostream>
-#include"PairsOfPoints.h"
+#include"PairsOfPointsGenerator.h"
 using namespace std;
 
 //
@@ -57,7 +57,7 @@ void checkValue(int data) {
 }
 
 void task1() {
-	PairsOfPoints exercise = PairsOfPoints();
+	PairsOfPointsGenerator exercise = PairsOfPointsGenerator();
 
 	for (int i = 0; i < DEFAULT_NUMBER_OF_GENERATION; i++)
 		exercise.generate();
@@ -75,7 +75,7 @@ void task2() {
 	cout << "Enter number of generation:"; cin >> number_of_gen;
 	checkValue(number_of_gen);
 
-	PairsOfPoints exercise = PairsOfPoints(size);
+	PairsOfPointsGenerator exercise = PairsOfPointsGenerator(size);
 
 	for (int i = 0; i < number_of_gen; i++)
 		exercise.generate();

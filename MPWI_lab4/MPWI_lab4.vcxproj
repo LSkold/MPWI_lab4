@@ -116,11 +116,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PairsOfPoints.cpp" />
+    <ClCompile Include="PairsOfPointsGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consts.h" />
-    <ClInclude Include="PairsOfPoints.h" />
+    <ClInclude Include="PairsOfPointsGenerator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,6 @@
-#include "PairsOfPoints.h"
+#include "PairsOfPointsGenerator.h"
 
-PairsOfPoints::PairsOfPoints()
+PairsOfPointsGenerator::PairsOfPointsGenerator()
 {
 	srand(time(NULL));
 	initTabs();
@@ -27,7 +27,7 @@ PairsOfPoints::PairsOfPoints()
 
 }
 
-PairsOfPoints::PairsOfPoints(int _size)
+PairsOfPointsGenerator::PairsOfPointsGenerator(int _size)
 {
 	srand(time(NULL));
 	size = _size;
@@ -35,7 +35,7 @@ PairsOfPoints::PairsOfPoints(int _size)
 	fillTab();
 }
 
-void PairsOfPoints::generate() {
+void PairsOfPointsGenerator::generate() {
 	x = rand()%size; 
 	y = DEFAULT_VALUE;
 	double sum_of_probs_in_line = sumInLine(x,table_of_probability);
@@ -52,7 +52,7 @@ void PairsOfPoints::generate() {
 	density_matrix[x][y]++;
 }
 
-double PairsOfPoints::sumInLine(int line,double **tab) {
+double PairsOfPointsGenerator::sumInLine(int line,double **tab) {
 
 	double sum = 0.0;
 	for (int i = 0; i < this->size; i++) {
@@ -61,7 +61,7 @@ double PairsOfPoints::sumInLine(int line,double **tab) {
 	return sum;
 }
 
-void PairsOfPoints::fillTab() {
+void PairsOfPointsGenerator::fillTab() {
 	double sum = 0.0;
 	double temp;
 	for (int i = 0; i < this->size; i++) {
@@ -81,7 +81,7 @@ void PairsOfPoints::fillTab() {
 
 }
 
-void PairsOfPoints::printTabs() {
+void PairsOfPointsGenerator::printTabs() {
 	cout << "Table of matrix densities" << endl;
 	cout << "xy";
 	for (int i = 0; i < this->size; i++) {
@@ -114,7 +114,7 @@ void PairsOfPoints::printTabs() {
 	}
 }
 
-void PairsOfPoints::initTabs() {
+void PairsOfPointsGenerator::initTabs() {
 	density_matrix = new double*[size];
 	table_of_probability = new double*[size];
 	for (int i = 0; i < this->size; i++) {
@@ -126,7 +126,7 @@ void PairsOfPoints::initTabs() {
 	}
 }
 
-PairsOfPoints::~PairsOfPoints()
+PairsOfPointsGenerator::~PairsOfPointsGenerator()
 {
 	for (int i = 0; i < this->size; i++) {
 		delete[] table_of_probability[i];

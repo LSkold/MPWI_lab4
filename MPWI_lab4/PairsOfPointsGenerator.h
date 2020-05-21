@@ -6,7 +6,7 @@
 #include <time.h>
 using namespace std;
 
-class PairsOfPoints
+class PairsOfPointsGenerator
 {
 private:
 	int x = DEFAULT_VALUE;
@@ -32,8 +32,8 @@ private:
 
 public:
 	
-	PairsOfPoints();
-	PairsOfPoints(int _size);
+	PairsOfPointsGenerator();
+	PairsOfPointsGenerator(int _size);
 
 	//
 	// main function of generation
@@ -45,6 +45,6 @@ public:
 	//
 	void printTabs();
 
-	~PairsOfPoints();
+	~PairsOfPointsGenerator();
 };
 
