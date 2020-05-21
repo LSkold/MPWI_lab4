@@ -1,2 +1,2 @@
 # MPWI_lab4
-Program created for course 'Metody Probabilystyczne w Informatyce'.
+Program created for course 'Metody Probabilistyczne w Informatyce'.
